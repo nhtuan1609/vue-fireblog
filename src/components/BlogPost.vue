@@ -7,7 +7,7 @@
         <p v-if="post.welcomeScreen">{{ post.blogPost }}</p>
         <p v-else class="content-preview">{{ post.blogHTML }}</p>
         <router-link v-if="post.welcomeScreen" class="link link-light" to="#">
-          Login/Register<arrows class="arrow arrow-light" />
+          Login/Register<Arrows class="arrow arrow-light" />
         </router-link>
         <router-link v-else class="link" to="#">
           View The Post<Arrows class="arrow" />
@@ -44,7 +44,7 @@ export default {
   display: flex;
   flex-direction: row;
   height: 650px;
-  margin: 10px;
+  margin: 10px 10px;
   overflow: hidden;
   border-radius: 4px;
   box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
@@ -113,8 +113,6 @@ export default {
   .blog-photo {
     flex: 4;
     order: 2;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -1px rgba(0, 0, 0, 0.06);
     @media (max-width: 800px) {
       flex: 3;
       order: 1;
