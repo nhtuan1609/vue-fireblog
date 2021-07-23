@@ -2,12 +2,12 @@
   <header>
     <nav class="container">
       <div class="branding">
-        <router-link class="header" :to="{ name: 'Home' }"
-          >FireBlogs</router-link
-        >
+        <router-link class="header" :to="{ name: 'Home' }">
+          FireBlogs
+        </router-link>
       </div>
-      <div class="nav-links">
-        <ul v-show="!mobile">
+      <div class="nav-links" v-show="!mobile">
+        <ul>
           <router-link class="link" to="#">Home</router-link>
           <router-link class="link" to="#">Blogs</router-link>
           <router-link class="link" to="#">Create post</router-link>
@@ -30,7 +30,7 @@
 <script>
 import menuIcon from "@/assets/Icons/bars-regular.svg";
 export default {
-  name: "navigation",
+  name: "Navigation",
   components: {
     menuIcon,
   },
@@ -65,10 +65,13 @@ export default {
 
 <style lang="scss" scoped>
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: #fff;
   padding: 0 25px;
-  box-shadow: 0 4px 6px -1px rbga(0, 0, 0, 0.1),
-    0 2px 4px -1px rbga(0, 0, 0, 0.06);
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
   z-index: 99;
 
   .link {
@@ -141,6 +144,10 @@ header {
     .link {
       padding: 15px 0;
       color: #fff;
+
+      &:hover {
+        color: #1eb8b8;
+      }
     }
   }
 
