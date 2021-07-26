@@ -16,21 +16,21 @@
         <p class="card-date">Posted on: {{ card.blogDate }}</p>
       </div>
       <router-link class="link" to="#">
-        VIEW THE POST<Arrows class="arrow" />
+        VIEW THE POST<Arrow class="arrow" />
       </router-link>
     </div>
   </div>
 </template>
 
 <script>
-import Arrows from "@/assets/Icons/arrow-right-light.svg";
+import Arrow from "@/assets/Icons/arrow-right-light.svg";
 import Edit from "../assets/Icons/edit-regular.svg";
 import Delete from "../assets/Icons/trash-regular.svg";
 
 export default {
   name: "BlogCard",
   props: ["card"],
-  components: { Arrows, Edit, Delete },
+  components: { Arrow, Edit, Delete },
 };
 </script>
 
@@ -39,8 +39,7 @@ export default {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 300px;
-  height: 400px;
+  min-height: 420px;
   overflow: hidden;
   border-radius: 4px;
   transition: 0.5s ease all;

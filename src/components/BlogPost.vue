@@ -7,10 +7,10 @@
         <p v-if="post.welcomeScreen">{{ post.blogPost }}</p>
         <p v-else class="content-preview">{{ post.blogHTML }}</p>
         <router-link v-if="post.welcomeScreen" class="link link-light" to="#">
-          Login/Register<Arrows class="arrow arrow-light" />
+          Login/Register<Arrow class="arrow arrow-light" />
         </router-link>
         <router-link v-else class="link" to="#">
-          View The Post<Arrows class="arrow" />
+          View The Post<Arrow class="arrow" />
         </router-link>
       </div>
     </div>
@@ -30,12 +30,12 @@
 </template>
 
 <script>
-import Arrows from "@/assets/Icons/arrow-right-light.svg";
+import Arrow from "@/assets/Icons/arrow-right-light.svg";
 
 export default {
   name: "BlogPost",
   props: ["post"],
-  components: { Arrows },
+  components: { Arrow },
 };
 </script>
 
